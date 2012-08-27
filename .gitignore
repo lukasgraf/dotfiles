@@ -1,0 +1,6 @@
+gitconfig
+*elc
+.DS_Store
+\#*
+emacs.d/backup*
+.rake_tasks-
