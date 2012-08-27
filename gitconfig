@@ -1,6 +1,9 @@
 [user]
-    name = <%= print("Your Name: "); STDOUT.flush; STDIN.gets.chomp %>
-    email = <%= print("Your Email: "); STDOUT.flush; STDIN.gets.chomp %>
+    name = Lukas Graf
+    email = lukas.graf@4teamwork.ch
+
+[github]
+    user = lukasgraf
 
 [color]
     diff = auto
@@ -25,7 +28,7 @@
 
 [core]
     excludesfile = <%= ENV['HOME'] %>/.gitignore
-    editor = /usr/local/Cellar/emacs/HEAD/Emacs.app/Contents/MacOS/bin/emacsclient
+    editor = /usr/local/Cellar//emacs/HEAD/bin/emacsclient
     autocrlf = input
     whitespace = tabwidth=4,tab-in-indent,cr-at-eol,trailing-space
 
@@ -34,10 +37,6 @@
 
 [format]
     pretty = %C(blue)%h%Creset %s %C(green)%d%Creset [%C(red)%an%Creset, %C(cyan)%cr%Creset] %C(bold reverse)%N%Creset
-
-[github]
-    user = <%= print("GitHub Username: "); STDOUT.flush; STDIN.gets.chomp %>
-    token = <%= print("GitHub API Token: "); STDOUT.flush; STDIN.gets.chomp %>
 
 [mergetool.ediff]
     cmd = /usr/local/Cellar/emacs/HEAD/Emacs.app/Contents/MacOS/bin/emacsclient --eval \"(progn  (defun ediff-write-merge-buffer ()    (let ((file ediff-merge-store-file))      (set-buffer ediff-buffer-C)      (write-region (point-min) (point-max) file)      (message \\\"Merge buffer saved in: %s\\\" file)      (set-buffer-modified-p nil)      (sit-for 1)))  (setq ediff-quit-merge-hook 'ediff-write-merge-buffer)   (ediff-merge-files-with-ancestor \\\"$LOCAL\\\" \\\"$REMOTE\\\"                                   \\\"$BASE\\\" nil \\\"$MERGED\\\"))\"
